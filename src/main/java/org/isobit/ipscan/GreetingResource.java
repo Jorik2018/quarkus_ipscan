@@ -37,12 +37,12 @@ service | 172.16.1.200 | ? | Windows
 public class GreetingResource {
 
     @GET
-    
-    public Object hello() {
+    public Object scan(@QueryParam("q") String q) {
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		File f=new File("C:\\Program Files (x86)\\Advanced IP Scanner\\advanced_ip_scanner_console.exe");
 		if(!f.exists())f=new File("D:\\Advanced IP Scanner\\advanced_ip_scanner_console.exe");
-		processBuilder.command(f.toString(),"/r:172.16.1.154-172.16.2.250");
+		
+		processBuilder.command(f.toString(),"/r:"+q.replaceAll("\\s+",""));
 		ArrayList ips=new ArrayList();
 		try {
 			Process process = processBuilder.start();
