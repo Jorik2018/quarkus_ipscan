@@ -59,4 +59,7 @@ Easily start your Reactive RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
 
-SET JAVA_HOME=E:\java\jdk-17.0.5+8 && SET PATH=E:\java\jdk-17.0.5+8;%PATH%
+SET PATH=E:\java\jdk-17.0.5+8;%PATH% && SET JAVA_HOME=E:\java\jdk-17.0.5+8
+git remote -v
+git remote set-url origin https://github.com/Jorik2018/quarkus_ipscan_api.git
+
